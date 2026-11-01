@@ -9,10 +9,11 @@ frontend
 - keszen: kepletbetukre tooltip (hover/koppintas): a, d, n, S, q, A, T, p, k, b — oldal szerint magyarazat (js/symbols.js)
 - tanitott kepletek: kamatos T_n=T_0*q^n; torlesztes A=t*(q^n*p')/(q^n-1), p'=q-1 (html, js/math.js, hints, symbols.js)
 - keszen: minden kepletdobozban szoveges kerdes a feladattipusokhoz (pl. Mennyi lesz n ev mulva?) — index, mertani, kamatos, torlesztes, osszefoglalo, css/style.css
+- javitas: szoveges fajlok UTF-8 + LF (.editorconfig, .gitattributes, .vscode/settings.json); 19 fajl normalizalva — ne legyen UTF-16 a Write miatt
+- keszen: kamatos oldal — logaritmus keplet a kerdesek dobozban; 2 uj pelda + 3 feladat (ka-9..ka-11); verify: 43 feladat, 0 hiba
 
 osszefoglalo
 
-- keszen: otoldalas matek gyakorlo oldal sorozatokhoz es penzugyi szamitasokhoz
-- keszen: minden feladat utan azonnali ellenorzes
-- keszen: kepletben a betukre raviszed az egeret (vagy koppintasz), es megmondja, mit jelent
-- keszen: kepletek mellett latszik, milyen szoveges kerdesre valaszolnak
+- keszen: kamatos kamatnál logaritmusos evek szamitasa (pelda + gyakorlo feladatok)
+- keszen: projekt fajlok UTF-8 kodolasra allitva (Cursor/Write ne rontsa el a magyar szoveget)
+- keszen: otoldalas matek gyakorlo, azonnali ellenorzes, keplet tooltip, kerdes a kepletek mellett

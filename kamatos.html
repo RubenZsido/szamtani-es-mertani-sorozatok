@@ -42,7 +42,9 @@
         </li>
         <li>
           <p class="formula-for">Hány év múlva lesz először legalább …?</p>
-          <p>Szorozgasd \(q\)-val, amíg \(T_0 \cdot q^n \ge \text{cél}\) (legkisebb \(n\)).</p>
+          <p>Szorozgasd \(q\)-val, amíg \(T_0 \cdot q^n \ge \text{cél}\) (legkisebb \(n\)), vagy logaritmussal:</p>
+          \[ n = \frac{\log(C) - \log(T_0)}{\log q} \]
+          <p>(\(C\) a célösszeg.) Ha nem egész jön ki, felfelé kerekítünk: a legkisebb egész \(n\), amire már teljesül.</p>
         </li>
         <li>
           <p class="formula-for">Hány százalék volt az éves kamatláb?</p>
@@ -111,6 +113,23 @@
     </section>
     <div data-exercise="ka-7"></div>
     <div data-exercise="ka-8"></div>
+
+    <h2>8. Logaritmussal — hány év?</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>6000 Ft, évi 8%. Mikor lesz először legalább 12 000 Ft?</p>
+      <p>\(1{,}08^n \ge 2\), tehát \(n = \log 2 / \log 1{,}08 \approx 9{,}01\). A 9. év végén még csak 11 994 Ft van, ezért a válasz <strong>10 év</strong>.</p>
+    </section>
+    <div data-exercise="ka-9"></div>
+
+    <h2>9. Nagyobb cél — szintén logaritmus</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>25 000 Ft, évi 6%, mikor éri el először az 50 000 Ft-ot?</p>
+      <p>\(n = \log(50\,000/25\,000) / \log 1{,}06 = \log 2 / \log 1{,}06 \approx 11{,}9\), tehát <strong>12 év</strong>.</p>
+    </section>
+    <div data-exercise="ka-10"></div>
+    <div data-exercise="ka-11"></div>
 
     <p class="pager">
       <a href="mertani.html">← Mértani</a>

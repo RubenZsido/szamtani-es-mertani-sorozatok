@@ -87,6 +87,39 @@
       },
       spec: { kind: "compound", A: 8000, p: 2, n: 10 },
     },
+    {
+      id: "ka-9",
+      question:
+        "6000 Ft kamatos kamatra 8%-on van. Logaritmussal (vagy szorozással) hány év múlva lesz először legalább 12 000 Ft?",
+      hint: "\\(1{,}08^n \\ge 2\\), tehát \\(n = \\log 2 / \\log 1{,}08 \\approx 9{,}01\\). A 9. év még kevés, válasz: 10 év.",
+      fields: [{ key: "n", label: "évek száma", type: "years", suffix: "év" }],
+      compute(M) {
+        return { n: M.yearsToReach(6000, 8, 12000) };
+      },
+      spec: { kind: "yearsToReach", A: 6000, p: 8, target: 12000 },
+    },
+    {
+      id: "ka-10",
+      question:
+        "25 000 Ft évi 6%-os kamattal nő. Hány év múlva lesz először legalább 50 000 Ft? (Használhatod: \\(n = \\log(C/T_0)/\\log q\\).)",
+      hint: "\\(C/T_0 = 2\\), \\(q = 1{,}06\\). \\(n \\approx 11{,}9\\) → felfelé egész: 12 év.",
+      fields: [{ key: "n", label: "évek száma", type: "years", suffix: "év" }],
+      compute(M) {
+        return { n: M.yearsToReach(25000, 6, 50000) };
+      },
+      spec: { kind: "yearsToReach", A: 25000, p: 6, target: 50000 },
+    },
+    {
+      id: "ka-11",
+      question:
+        "8000 Ft évi 10%-kal kamatozik. Hány év múlva lesz először legalább 25 000 Ft?",
+      hint: "\\(n = \\log(25\\,000/8000) / \\log 1{,}1 \\approx 12{,}0\\). Ellenőrizd: \\(8000 \\cdot 1{,}1^{11}\\) még kevés, \\(1{,}1^{12}\\) már elég.",
+      fields: [{ key: "n", label: "évek száma", type: "years", suffix: "év" }],
+      compute(M) {
+        return { n: M.yearsToReach(8000, 10, 25000) };
+      },
+      spec: { kind: "yearsToReach", A: 8000, p: 10, target: 25000 },
+    },
   ];
 
   root.FELADATOK = FELADATOK;
