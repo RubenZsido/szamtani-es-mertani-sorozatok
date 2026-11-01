@@ -43,8 +43,9 @@
       return 1 + p / 100;
     },
 
-    compound(A, p, n) {
-      return A * this.kamatTényező(p) ** n;
+    // T_n = T_0 * q^n (kamatos kamat)
+    compound(T0, p, n) {
+      return T0 * this.kamatTényező(p) ** n;
     },
 
     depreciate(A, p, n) {
@@ -69,8 +70,11 @@
       return (Math.pow(T / A, 1 / n) - 1) * 100;
     },
 
-    annuity(T, q, n) {
-      return (T * q ** n * (q - 1)) / (q ** n - 1);
+    // A = t * (q^n * p') / (q^n - 1), p' = q - 1
+    annuity(t, q, n) {
+      const qn = q ** n;
+      const pPrime = q - 1;
+      return (t * qn * pPrime) / (qn - 1);
     },
 
     annuityFromPercent(T, p, n, monthly) {

@@ -4,7 +4,7 @@
     {
       id: "ka-1",
       question: "20 000 Ft-ot teszünk be évi 5%-ra. Mennyi lesz 1 év múlva?",
-      hint: "Egy év: szorozd 1,05-tel. \\(T = A \\cdot (1 + p/100)\\).",
+      hint: "Egy év: szorozd 1,05-tel. \\(T_1 = T_0 \\cdot q\\), \\(q = 1 + p/100\\).",
       fields: [{ key: "T", label: "összeg 1 év múlva", type: "money", suffix: "Ft" }],
       compute(M) {
         return { T: M.compound(20000, 5, 1) };
@@ -25,7 +25,7 @@
       id: "ka-3",
       question:
         "Három év alatt 10%-os kamatos kamattal 13 310 Ft lett a betét. Mennyi volt a kezdő összeg?",
-      hint: "Fordítva: oszd el \\(1{,}1^3\\)-mal. \\(A = T / q^n\\).",
+      hint: "Fordítva: oszd el \\(1{,}1^3\\)-mal. \\(T_0 = T_n / q^n\\).",
       fields: [{ key: "A", label: "kezdő összeg", type: "money", suffix: "Ft" }],
       compute() {
         return { A: 10000 };
