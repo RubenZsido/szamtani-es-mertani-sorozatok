@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hu">
 <head>
   <meta charset="utf-8" />
@@ -27,8 +27,25 @@
     </div>
     <div class="box">
       <p>Képletek</p>
-      \[ T_{k+1} = T_k\cdot q - A \qquad A = t\cdot\frac{q^n p'}{q^n - 1} \]
-      <p>Éves: \(q = 1 + p/100\), \(p' = q - 1\). Havi: \(q = 1 + p/1200\), \(n\) = hónapok száma. Itt \(t\) a felvett hitel (a példákban gyakran \(T\)).</p>
+      <ul class="formula-list">
+        <li>
+          <p class="formula-for">Mennyi marad tartozásból egy időszak után? (lépésenként)</p>
+          \[ T_{k+1} = T_k\cdot q - A \]
+        </li>
+        <li>
+          <p class="formula-for">Mennyi a törlesztőrészlet (éves vagy havi)?</p>
+          \[ A = t\cdot\frac{q^n p'}{q^n - 1},\quad p' = q - 1 \]
+        </li>
+        <li>
+          <p class="formula-for">Mennyit fizetünk be összesen?</p>
+          <p>\(\text{összesen} = n \cdot A\) (egész forintra kerekített \(A\)-val)</p>
+        </li>
+        <li>
+          <p class="formula-for">Mennyi ebből a kamat?</p>
+          <p>\(\text{kamat} = n \cdot A - t\)</p>
+        </li>
+      </ul>
+      <p>Éves: \(q = 1 + p/100\). Havi: \(q = 1 + p/1200\), \(n\) = hónapok száma. Itt \(t\) a felvett hitel (a példákban gyakran \(T\)).</p>
     </div>
 
     <h2>1. Két év — táblázattal</h2>

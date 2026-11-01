@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hu">
 <head>
   <meta charset="utf-8" />
@@ -27,7 +27,36 @@
     </div>
     <div class="box">
       <p>Képletek</p>
-      \[ a_n = a_1 \cdot q^{n-1} \qquad S_n = a_1\frac{q^n-1}{q-1}\ (q\neq 1),\quad S_n = a_1 n\ (q=1) \]
+      <ul class="formula-list">
+        <li>
+          <p class="formula-for">Mennyi a hányados? Mik a következő tagok?</p>
+          <p>\(q = a_{k+1} / a_k\), utána szorozd \(q\)-val.</p>
+        </li>
+        <li>
+          <p class="formula-for">Mennyi az n. tag?</p>
+          \[ a_n = a_1 \cdot q^{n-1} \]
+        </li>
+        <li>
+          <p class="formula-for">Hányadik tagja a sorozatnak a …?</p>
+          <p>Oldd meg: \(a_1 \cdot q^{n-1} = \text{adott érték}\) → \(n\) egész.</p>
+        </li>
+        <li>
+          <p class="formula-for">Mennyi az első tag?</p>
+          <p>\(a_1 = a_n / q^{n-1}\)</p>
+        </li>
+        <li>
+          <p class="formula-for">Add meg \(a_1\)-et és \(q\)-t (két ismert tag).</p>
+          <p>\(q = \sqrt[m-k]{\dfrac{a_m}{a_k}}\), \(a_1 = a_k / q^{k-1}\)</p>
+        </li>
+        <li>
+          <p class="formula-for">Mennyi az első n tag összege?</p>
+          \[ S_n = a_1\frac{q^n-1}{q-1}\ (q\neq 1),\quad S_n = a_1 n\ (q=1) \]
+        </li>
+        <li>
+          <p class="formula-for">Mekkora lesz … múlva? (növekedés, tört \(q\))</p>
+          <p>\(\text{új} = \text{kiinduló} \cdot q^n\) — ugyanaz, mint az n. tag, ha \(a_1\) a kezdeti érték.</p>
+        </li>
+      </ul>
     </div>
 
     <h2>1. Felismerés</h2>

@@ -8,9 +8,11 @@ frontend
 - bongeszo: mind az 5 oldal, hibas/helyes ag, navigacio, mobil 390px (fajlok: index.html, mertani.html, kamatos.html, torlesztes.html, osszefoglalo.html, css/style.css, js/)
 - keszen: kepletbetukre tooltip (hover/koppintas): a, d, n, S, q, A, T, p, k, b — oldal szerint magyarazat (js/symbols.js)
 - tanitott kepletek: kamatos T_n=T_0*q^n; torlesztes A=t*(q^n*p')/(q^n-1), p'=q-1 (html, js/math.js, hints, symbols.js)
+- keszen: minden kepletdobozban szoveges kerdes a feladattipusokhoz (pl. Mennyi lesz n ev mulva?) — index, mertani, kamatos, torlesztes, osszefoglalo, css/style.css
 
 osszefoglalo
 
 - keszen: otoldalas matek gyakorlo oldal sorozatokhoz es penzugyi szamitasokhoz
 - keszen: minden feladat utan azonnali ellenorzes
 - keszen: kepletben a betukre raviszed az egeret (vagy koppintasz), es megmondja, mit jelent
+- keszen: kepletek mellett latszik, milyen szoveges kerdesre valaszolnak

@@ -70,6 +70,21 @@ p { margin: 0.55rem 0; }
 }
 .box p:first-child { margin-top: 0; font-weight: 650; }
 
+/* Képlet → milyen szöveges kérdésre válaszol */
+.formula-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+.formula-list li { margin: 0.75rem 0; }
+.formula-list li:last-child { margin-bottom: 0; }
+.formula-for {
+  margin: 0 0 0.3rem;
+  font-style: italic;
+  color: var(--muted);
+  font-weight: 450;
+}
+
 .card { background: var(--card); padding: 1rem 1.1rem 1.15rem; margin: 1rem 0 1.35rem; }
 .example { background: var(--example); }
 .kicker {
