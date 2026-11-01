@@ -27,6 +27,7 @@
     },
     kamatos: {
       A: "kezdőtőke (ugyanaz, mint T₀ — feladatokban gyakran A)",
+      C: "célösszeg: a keresett minimum (pl. „legalább ennyi” legkorábban)",
       T: "összeg időszak után: Tₙ az n-ediken, T₀ a kezdő",
       q: "kamattényező: q = 1 + p/100 (csökkenésnél 1 − p/100)",
       p: "kamatláb százalékban (éves, ha nincs más megadva)",
@@ -50,6 +51,7 @@
       n: "tagok / időszakok száma",
       S: "az első n tag összege",
       A: "kezdőtőke",
+      C: "célösszeg (kamatos: mikor éri el először)",
       T: "végösszeg vagy hitelösszeg",
       p: "kamatláb százalékban",
     },
