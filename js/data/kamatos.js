@@ -120,6 +120,43 @@
       },
       spec: { kind: "yearsToReach", A: 8000, p: 10, target: 25000 },
     },
+    {
+      id: "ka-12",
+      question:
+        "20 000 Ft hitel, évi 10%, 2 év, azonos éves törlesztő. Mennyi a törlesztő? Egész forintra kerekíts.",
+      hint: "\\(A = t \\cdot \\dfrac{q^n \\cdot p'}{q^n - 1}\\), \\(p' = q - 1\\), \\(q = 1{,}1\\), \\(n = 2\\), \\(t = 20\\,000\\).",
+      fields: [{ key: "a", label: "éves törlesztő", type: "money", suffix: "Ft" }],
+      compute(M) {
+        return { a: M.roundFt(M.annuity(20000, 1.1, 2)) };
+      },
+      spec: { kind: "annuity", T: 20000, q: 1.1, n: 2 },
+    },
+    {
+      id: "ka-13",
+      question:
+        "100 000 Ft hitel, évi 10%, 3 év, azonos éves törlesztő. Mennyi a törlesztő? Egész Ft.",
+      hint: "Ugyanaz a képlet: \\(n = 3\\), \\(q^3 = 1{,}331\\).",
+      fields: [{ key: "a", label: "éves törlesztő", type: "money", suffix: "Ft" }],
+      compute(M) {
+        return { a: M.roundFt(M.annuity(100000, 1.1, 3)) };
+      },
+      spec: { kind: "annuity", T: 100000, q: 1.1, n: 3 },
+    },
+    {
+      id: "ka-14",
+      question:
+        "50 000 Ft hitel, évi 8%, 4 év, éves törlesztő (kerekített \\(A\\)). Mennyit fizetsz be összesen, és mennyi ebből kamat?",
+      hint: "Először \\(A\\) a képletből, egész Ft. Összesen: \\(4A\\). Kamat: \\(4A - t\\).",
+      fields: [
+        { key: "total", label: "összesen befizetve", type: "money", suffix: "Ft" },
+        { key: "interest", label: "kamat", type: "money", suffix: "Ft" },
+      ],
+      compute(M) {
+        const a = M.roundFt(M.annuity(50000, 1.08, 4));
+        return { total: 4 * a, interest: 4 * a - 50000 };
+      },
+      spec: { kind: "annuityPaid", T: 50000, q: 1.08, n: 4 },
+    },
   ];
 
   root.FELADATOK = FELADATOK;

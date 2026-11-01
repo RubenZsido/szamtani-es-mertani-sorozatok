@@ -5,7 +5,7 @@
       id: "to-1",
       question:
         "20 000 Ft hitel, évi 10%, 2 év, év végi azonos törlesztő. Mennyi a törlesztőrészlet? Egész forintra kerekíts.",
-      hint: "\\(A = t \\cdot \\dfrac{q^n p'}{q^n - 1}\\), \\(p' = q - 1\\), \\(q = 1{,}1\\), \\(n = 2\\), \\(t = 20\\,000\\).",
+      hint: "\\(A = t \\cdot \\dfrac{q^n \cdot p'}{q^n - 1}\\), \\(p' = q - 1\\), \\(q = 1{,}1\\), \\(n = 2\\), \\(t = 20\\,000\\).",
       fields: [{ key: "a", label: "éves törlesztő", type: "money", suffix: "Ft" }],
       compute(M) {
         return { a: M.annuity(20000, 1.1, 2) };

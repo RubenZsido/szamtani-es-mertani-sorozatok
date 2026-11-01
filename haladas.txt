@@ -11,9 +11,11 @@ frontend
 - keszen: minden kepletdobozban szoveges kerdes a feladattipusokhoz (pl. Mennyi lesz n ev mulva?) — index, mertani, kamatos, torlesztes, osszefoglalo, css/style.css
 - javitas: szoveges fajlok UTF-8 + LF (.editorconfig, .gitattributes, .vscode/settings.json); 19 fajl normalizalva — ne legyen UTF-16 a Write miatt
 - keszen: kamatos oldal — logaritmus keplet a kerdesek dobozban; 2 uj pelda + 3 feladat (ka-9..ka-11); verify: 43 feladat, 0 hiba
+- keszen: kamatos vegen hitel torlesztes (10. fejezet): annuitas keplet A=t*(q^n*p')/(q^n-1), pelda + ka-12..ka-14; torlesztes keplet szorzas javitva; verify: 46 feladat, 0 hiba
 
 osszefoglalo
 
 - keszen: kamatos kamatnál logaritmusos evek szamitasa (pelda + gyakorlo feladatok)
+- keszen: kamatos oldal vegen hitel torlesztes feladatok (annuitas keplet)
 - keszen: projekt fajlok UTF-8 kodolasra allitva (Cursor/Write ne rontsa el a magyar szoveget)
 - keszen: otoldalas matek gyakorlo, azonnali ellenorzes, keplet tooltip, kerdes a kepletek mellett
