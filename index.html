@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Számtani sorozat — Ráhel matek</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@450;650&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="index.html">Ráhel matek</a>
+    <nav>
+      <a href="index.html" aria-current="page">Számtani</a>
+      <a href="mertani.html">Mértani</a>
+      <a href="kamatos.html">Kamatos kamat</a>
+      <a href="torlesztes.html">Törlesztés</a>
+      <a href="osszefoglalo.html">Összefoglaló</a>
+    </nav>
+  </header>
+  <main>
+    <p class="meta">1 / 5 · a legegyszerűbbtől</p>
+    <h1>Számtani sorozat</h1>
+    <div class="lead">
+      <p>Számtani a sorozat, ha minden tag ugyanannyival nagyobb (vagy kisebb), mint az előző. Ezt a lépést <strong>differenciának</strong> hívjuk, jele \(d\).</p>
+    </div>
+    <div class="box">
+      <p>Képletek</p>
+      \[ a_n = a_1 + (n-1)d \qquad S_n = \frac{n}{2}\bigl(2a_1 + (n-1)d\bigr) = \frac{n}{2}(a_1 + a_n) \]
+    </div>
+
+    <h2>1. Felismerés</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>A 2, 5, 8, 11, … sorozat számtani, mert \(5-2 = 8-5 = 11-8 = 3\). Tehát \(d = 3\). A következő tag: \(11 + 3 = 14\).</p>
+    </section>
+    <div data-exercise="sz-1"></div>
+
+    <h2>2. Következő tag — először számoljunk végig</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>\(a_1 = 2\), \(d = 3\). Az 5. tagot még kézzel is kiírhatod:</p>
+      <p>2, 5, 8, 11, <strong>14</strong>. Négy lépés kellett az ötödik tagig: \(2 + 4\cdot 3 = 14\).</p>
+    </section>
+    <div data-exercise="sz-2"></div>
+
+    <h2>3. A képlet nagyobb n-re</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>\(a_1 = 3\), \(d = 2\). A 15. tag: \(a_{15} = 3 + 14\cdot 2 = 31\).</p>
+      <p>Negatív differencia is lehet: akkor a sorozat csökken.</p>
+    </section>
+    <div data-exercise="sz-3"></div>
+
+    <h2>4. Hányadik tag?</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>\(a_1 = 4\), \(d = 5\). Melyik tag a 49?</p>
+      <ol class="steps">
+        <li>\(4 + (n-1)\cdot 5 = 49\)</li>
+        <li>\((n-1)\cdot 5 = 45\)</li>
+        <li>\(n-1 = 9\), tehát \(n = 10\).</li>
+      </ol>
+    </section>
+    <div data-exercise="sz-4"></div>
+
+    <h2>5. Az első tag visszafelé</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>A 8. tag 20, \(d = 3\). Akkor \(20 = a_1 + 7\cdot 3\), tehát \(a_1 = 20 - 21 = -1\).</p>
+    </section>
+    <div data-exercise="sz-5"></div>
+
+    <h2>6. Két ismert tag</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>\(a_3 = 10\), \(a_7 = 22\). A két index között 4 lépés van:</p>
+      <ol class="steps">
+        <li>\(d = (22-10)/4 = 3\)</li>
+        <li>\(a_1 = 10 - 2\cdot 3 = 4\)</li>
+      </ol>
+      <p>Ellenőrzés: \(a_7 = 4 + 6\cdot 3 = 22\).</p>
+    </section>
+    <div data-exercise="sz-6"></div>
+
+    <h2>7. Az első n tag összege</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>\(a_1 = 2\), \(d = 3\), első 10 tag. \(a_{10} = 2 + 9\cdot 3 = 29\), így</p>
+      \[ S_{10} = \frac{10}{2}(2 + 29) = 5\cdot 31 = 155. \]
+    </section>
+    <div data-exercise="sz-7"></div>
+
+    <h2>8. Szöveges feladat</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>Hétfőn 10 percet futsz, minden nap 5 perccel többet, 7 napon át. \(a_1 = 10\), \(d = 5\), \(n = 7\):</p>
+      \[ S_7 = \frac{7}{2}\bigl(20 + 6\cdot 5\bigr) = \frac{7}{2}\cdot 50 = 175 \text{ perc.} \]
+    </section>
+    <div data-exercise="sz-8"></div>
+
+    <h2>9. Két tagösszeg</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>\(a_2 + a_3 = 16\) és \(a_4 + a_5 = 24\).</p>
+      <ol class="steps">
+        <li>\(2a_1 + 3d = 16\)</li>
+        <li>\(2a_1 + 7d = 24\)</li>
+        <li>Kivonva: \(4d = 8\), \(d = 2\), majd \(a_1 = 5\).</li>
+      </ol>
+    </section>
+    <div data-exercise="sz-9"></div>
+
+    <p class="pager">
+      <span></span>
+      <a href="mertani.html">Következő: mértani sorozat →</a>
+    </p>
+    <footer>Középiskolai sorozatok · NAT 2020 stílus, saját feladatok.</footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <script src="js/math.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/page.js"></script>
+  <script src="js/data/szamtani.js"></script>
+  <script>startPage(FELADATOK);</script>
+</body>
+</html>

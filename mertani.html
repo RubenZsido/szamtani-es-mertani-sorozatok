@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mértani sorozat — Ráhel matek</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@450;650&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="index.html">Ráhel matek</a>
+    <nav>
+      <a href="index.html">Számtani</a>
+      <a href="mertani.html" aria-current="page">Mértani</a>
+      <a href="kamatos.html">Kamatos kamat</a>
+      <a href="torlesztes.html">Törlesztés</a>
+      <a href="osszefoglalo.html">Összefoglaló</a>
+    </nav>
+  </header>
+  <main>
+    <p class="meta">2 / 5 · szorzás, nem összeadás</p>
+    <h1>Mértani sorozat</h1>
+    <div class="lead">
+      <p>Mértani a sorozat, ha minden tag ugyanannyiszorosa az előzőnek. Ezt a szorzót <strong>hányadosnak</strong> (kvóciensnek) hívjuk, jele \(q\). \(q \neq 0\), és a tagok sem nullák.</p>
+    </div>
+    <div class="box">
+      <p>Képletek</p>
+      \[ a_n = a_1 \cdot q^{n-1} \qquad S_n = a_1\frac{q^n-1}{q-1}\ (q\neq 1),\quad S_n = a_1 n\ (q=1) \]
+    </div>
+
+    <h2>1. Felismerés</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>Az 1, 2, 4, 8, 16, … sorozat mértani, mert \(2/1 = 4/2 = 8/4 = 2\). Tehát \(q = 2\). Következő tag: \(16\cdot 2 = 32\).</p>
+    </section>
+    <div data-exercise="me-1"></div>
+
+    <h2>2. A következő tagok szorzással</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>\(a_1 = 3\), \(q = 2\). Az 5. tag: \(3, 6, 12, 24, 48\). Képlettel: \(a_5 = 3\cdot 2^4 = 48\).</p>
+    </section>
+    <div data-exercise="me-2"></div>
+
+    <h2>3. Negatív hányados</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>\(a_1 = 5\), \(q = -2\). A tagok előjele váltakozik: 5, −10, 20, −40, …</p>
+      <p>\(a_4 = 5\cdot (-2)^3 = 5\cdot (-8) = -40\).</p>
+    </section>
+    <div data-exercise="me-3"></div>
+
+    <h2>4. Hányadik tag?</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>\(a_1 = 2\), \(q = 3\). Melyik tag a 162?</p>
+      <ol class="steps">
+        <li>\(2\cdot 3^{n-1} = 162\)</li>
+        <li>\(3^{n-1} = 81 = 3^4\)</li>
+        <li>\(n = 5\).</li>
+      </ol>
+    </section>
+    <div data-exercise="me-4"></div>
+
+    <h2>5. Az első tag visszafelé</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>A 4. tag 24, \(q = 2\). Akkor \(24 = a_1 \cdot 2^3\), tehát \(a_1 = 3\).</p>
+    </section>
+    <div data-exercise="me-5"></div>
+
+    <h2>6. Két ismert tag</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>\(a_3 = 12\), \(a_6 = 96\). A két index között 3 lépés van:</p>
+      <ol class="steps">
+        <li>\(q^3 = 96/12 = 8\), így \(q = 2\)</li>
+        <li>\(a_1 = 12 / 2^2 = 3\)</li>
+      </ol>
+    </section>
+    <div data-exercise="me-6"></div>
+
+    <h2>7. Két tag, negatív q</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>\(a_3 = 20\), \(a_6 = -160\). \(q^3 = -160/20 = -8\), tehát \(q = -2\), és \(a_1 = 20 / 4 = 5\).</p>
+    </section>
+    <div data-exercise="me-7"></div>
+
+    <h2>8. Összeg</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>\(a_1 = 3\), \(q = 2\), első 6 tag: \(S_6 = 3\cdot(2^6-1)/(2-1) = 3\cdot 63 = 189\).</p>
+    </section>
+    <div data-exercise="me-8"></div>
+
+    <h2>9. Ha q = 1</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>Ha \(q = 1\), minden tag egyenlő. \(a_1 = 7\), 15 tag összege: \(7\cdot 15 = 105\). A tört képlet itt nem használható (nullával osztanál).</p>
+    </section>
+    <div data-exercise="me-9"></div>
+
+    <h2>10. Duplázódó edzés</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>Hétfőn 2 perc, minden nap a duplája, 6 nap: \(S_6 = 2\cdot(2^6-1) = 126\) perc.</p>
+    </section>
+    <div data-exercise="me-10"></div>
+
+    <h2>11. Növekvő terület</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>Egy tó 10 m²-ről indul, hetente 1,5-szeresére nő. 4 hét múlva: \(10\cdot 1{,}5^4 = 50{,}625\) m².</p>
+    </section>
+    <div data-exercise="me-11"></div>
+
+    <p class="pager">
+      <a href="index.html">← Számtani</a>
+      <a href="kamatos.html">Következő: kamatos kamat →</a>
+    </p>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <script src="js/math.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/page.js"></script>
+  <script src="js/data/mertani.js"></script>
+  <script>startPage(FELADATOK);</script>
+</body>
+</html>

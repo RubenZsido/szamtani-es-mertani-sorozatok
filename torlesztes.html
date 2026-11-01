@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hitel törlesztés — Ráhel matek</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@450;650&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="index.html">Ráhel matek</a>
+    <nav>
+      <a href="index.html">Számtani</a>
+      <a href="mertani.html">Mértani</a>
+      <a href="kamatos.html">Kamatos kamat</a>
+      <a href="torlesztes.html" aria-current="page">Törlesztés</a>
+      <a href="osszefoglalo.html">Összefoglaló</a>
+    </nav>
+  </header>
+  <main>
+    <p class="meta">4 / 5 · először táblázat, aztán képlet</p>
+    <h1>Hitel törlesztés</h1>
+    <div class="lead">
+      <p>A hitel minden időszakban kamatozik, aztán fizetsz egy <strong>azonos</strong> törlesztőt (\(a\)). A tartozás: szorozd \(q\)-val, vonj le \(a\)-t. Az utolsó fizetés után 0 marad. Ez a mértani sorozat összegképletéből jön ki.</p>
+    </div>
+    <div class="box">
+      <p>Képletek</p>
+      \[ T_{k+1} = T_k\cdot q - a \qquad a = T\cdot\frac{q^n(q-1)}{q^n-1} \]
+      <p>Éves: \(q = 1 + p/100\). Havi: \(q = 1 + p/1200\), és \(n\) a hónapok száma.</p>
+    </div>
+
+    <h2>1. Két év — táblázattal</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>10 000 Ft, 10%, 2 év, év végi törlesztő \(a\).</p>
+      <ol class="steps">
+        <li>1. év: \(10\,000\cdot 1{,}1 - a = 11\,000 - a\)</li>
+        <li>2. év: \((11\,000 - a)\cdot 1{,}1 - a = 0\)</li>
+        <li>\(12\,100 - 1{,}1a = a\), tehát \(12\,100 = 2{,}1a\), \(a \approx 5762\) Ft</li>
+      </ol>
+      <p>Ugyanez a képlettel: \(a = 10\,000\cdot 1{,}1^2 \cdot 0{,}1 / (1{,}21-1)\).</p>
+    </section>
+    <div data-exercise="to-1"></div>
+
+    <h2>2. Három év — már a képlet a gyorsabb</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>A 2 éves esetet általánosítva: a tartozás kamatozik \(n\)-szer, a befizetések mértani sort adnak. Innen az annuitás-képlet.</p>
+    </section>
+    <div data-exercise="to-2"></div>
+
+    <h2>3. Összesen és kamat</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>Ha \(a \approx 40\,211\) Ft és 3 év, összesen \(120\,633\) Ft. Ebből kamat \(20\,633\) Ft — ennyivel fizetsz többet, mint amennyit felvettél.</p>
+    </section>
+    <div data-exercise="to-3"></div>
+
+    <h2>4. Hosszabb futamidő</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>Nagyobb \(n\)-nél a képlet ugyanaz, csak \(q^n\)-t számold ki először. Kerekíts egész forintra — a bank is így tesz.</p>
+    </section>
+    <div data-exercise="to-4"></div>
+
+    <h2>5. Havi törlesztés</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>A gyakorlatban havonta fizetsz. Éves 12% → havi 1%, \(q = 1{,}01\). 12 hónap = 12 lépés, nem 1.</p>
+    </section>
+    <div data-exercise="to-5"></div>
+
+    <h2>6. Telefon-részlet</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>A THM-et úgy kezeld, mint az éves kamatlábat a feladatban. 18% → havi \(q = 1{,}015\).</p>
+    </section>
+    <div data-exercise="to-6"></div>
+    <div data-exercise="to-7"></div>
+
+    <p class="pager">
+      <a href="kamatos.html">← Kamatos kamat</a>
+      <a href="osszefoglalo.html">Következő: összefoglaló →</a>
+    </p>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <script src="js/math.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/page.js"></script>
+  <script src="js/data/torlesztes.js"></script>
+  <script>startPage(FELADATOK);</script>
+</body>
+</html>

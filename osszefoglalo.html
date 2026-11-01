@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Összefoglaló — Ráhel matek</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@450;650&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="index.html">Ráhel matek</a>
+    <nav>
+      <a href="index.html">Számtani</a>
+      <a href="mertani.html">Mértani</a>
+      <a href="kamatos.html">Kamatos kamat</a>
+      <a href="torlesztes.html">Törlesztés</a>
+      <a href="osszefoglalo.html" aria-current="page">Összefoglaló</a>
+    </nav>
+  </header>
+  <main>
+    <p class="meta">5 / 5 · mi kapcsolja össze a négy témát</p>
+    <h1>Összefoglaló</h1>
+    <div class="lead">
+      <p>A számtani sorozat <em>hozzáad</em>, a mértani <em>szoroz</em>. A kamatos kamat mértani sorozat. A törlesztő azért állandó, mert a tartozásból levont azonos \(a\)-k mértani összeget adnak.</p>
+    </div>
+
+    <table class="compare">
+      <thead>
+        <tr><th></th><th>Számtani</th><th>Mértani</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Lépés</td><td>\(d\) különbség</td><td>\(q\) hányados</td></tr>
+        <tr><td>n. tag</td><td>\(a_1+(n-1)d\)</td><td>\(a_1 q^{n-1}\)</td></tr>
+        <tr><td>Összeg</td><td>\(\frac{n}{2}(a_1+a_n)\)</td><td>\(a_1\frac{q^n-1}{q-1}\)</td></tr>
+        <tr><td>Pénz</td><td>minden nap + ugyanannyi perc</td><td>kamat, népesség, részlet</td></tr>
+      </tbody>
+    </table>
+
+    <div class="box">
+      <p>Pénzügyi zsebképlet</p>
+      \[ q=1+\frac{p}{100}\quad T=A q^n\quad a=T\frac{q^n(q-1)}{q^n-1} \]
+    </div>
+
+    <h2>1. Melyik a számtani?</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>2, 4, 8, 16 — hányados 2, mértani. 5, 8, 11, 14 — különbség 3, számtani. Először mindig nézd: kivonás vagy osztás ad állandót?</p>
+    </section>
+    <div data-exercise="os-1"></div>
+
+    <h2>2. Kamatos kamat = mértani</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>A betét évei: \(A,\ Aq,\ Aq^2,\ \dots\). A 0. év a tőke; \(n\) év múlva \(A q^n\). Ez a mértani \(n+1\). tagja, ha \(a_1 = A\).</p>
+    </section>
+    <div data-exercise="os-2"></div>
+
+    <h2>3. Ugyanaz a start, más növekedés</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>\(a_1 = 3\), \(d = 3\) vs \(b_1 = 3\), \(q = 3\). Ötödik tag: számtani 15, mértani 243. A szorzás hamar elszáll.</p>
+    </section>
+    <div data-exercise="os-3"></div>
+
+    <h2>4. A törlesztő „ára”</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>Mindig kérdezd meg: a \(n\cdot a\) mennyivel több, mint a hitel? Az a kamat, amit a bank keres.</p>
+    </section>
+    <div data-exercise="os-4"></div>
+
+    <h2>5. Gyűjtőjáradék — a törlesztő tükörképe</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>Ha minden évben ugyanannyit teszel be, a betétek különböző ideig kamatoznak. Az összeg mértani sor: \(aq^n + aq^{n-1} + \cdots + aq\).</p>
+    </section>
+    <div data-exercise="os-5"></div>
+
+    <p class="pager">
+      <a href="torlesztes.html">← Törlesztés</a>
+      <a href="index.html">Vissza a számtanihoz</a>
+    </p>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <script src="js/math.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/page.js"></script>
+  <script src="js/data/osszefoglalo.js"></script>
+  <script>startPage(FELADATOK);</script>
+</body>
+</html>

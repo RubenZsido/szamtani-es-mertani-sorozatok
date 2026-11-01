@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kamatos kamat — Ráhel matek</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@450;650&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="index.html">Ráhel matek</a>
+    <nav>
+      <a href="index.html">Számtani</a>
+      <a href="mertani.html">Mértani</a>
+      <a href="kamatos.html" aria-current="page">Kamatos kamat</a>
+      <a href="torlesztes.html">Törlesztés</a>
+      <a href="osszefoglalo.html">Összefoglaló</a>
+    </nav>
+  </header>
+  <main>
+    <p class="meta">3 / 5 · a mértani sorozat a bankban</p>
+    <h1>Kamatos kamat</h1>
+    <div class="lead">
+      <p><strong>Egyszerű kamat:</strong> mindig csak az eredeti tőke után számolnak kamatot. <strong>Kamatos kamat:</strong> a kamatot hozzáírják a tőkéhez, és a következő évben már ez kamatozik. Ez mértani sorozat, hányadosa a kamattényező.</p>
+    </div>
+    <div class="box">
+      <p>Képletek</p>
+      \[ q = 1 + \frac{p}{100} \qquad T = A \cdot q^n \qquad \text{csökkenés: } T = A\cdot\Bigl(1-\frac{p}{100}\Bigr)^n \]
+    </div>
+
+    <h2>1. Egyetlen év</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>10 000 Ft, évi 10%. Egy év múlva: \(10\,000 \cdot 1{,}1 = 11\,000\) Ft. A 1000 Ft a kamat.</p>
+    </section>
+    <div data-exercise="ka-1"></div>
+
+    <h2>2. Több év — a kamat is kamatozik</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>10 000 Ft, 10%, 3 év:</p>
+      <ol class="steps">
+        <li>1. év vége: 11 000</li>
+        <li>2. év vége: 12 100</li>
+        <li>3. év vége: \(10\,000 \cdot 1{,}1^3 = 13\,310\) Ft</li>
+      </ol>
+      <p>Egyszerű kamattal csak 13 000 lenne. A 310 Ft a „kamat kamata”.</p>
+    </section>
+    <div data-exercise="ka-2"></div>
+
+    <h2>3. Mennyi volt a tőke?</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>3 év alatt 10%-kal 13 310 Ft lett. \(A = 13\,310 / 1{,}1^3 = 10\,000\) Ft.</p>
+    </section>
+    <div data-exercise="ka-3"></div>
+
+    <h2>4. Mikor duplázódik?</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>8000 Ft, évi 5%, mikor lesz legalább 16 000?</p>
+      <p>\(1{,}05^{14} \approx 1{,}98\), \(1{,}05^{15} \approx 2{,}08\). Tehát a 15. év végén éri el először. (Logaritmussal: \(n = \log 2 / \log 1{,}05 \approx 14{,}2\), felfelé egész.)</p>
+    </section>
+    <div data-exercise="ka-4"></div>
+
+    <h2>5. Mekkora volt a kamatláb?</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>10 000 Ft két év alatt 12 100 Ft. \(q^2 = 1{,}21\), \(q = 1{,}1\), tehát \(p = 10\%\).</p>
+    </section>
+    <div data-exercise="ka-5"></div>
+
+    <h2>6. Értékcsökkenés</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>4 000 000 Ft-os autó, évente 15%-ot veszít. 3 év múlva: \(4\,000\,000 \cdot 0{,}85^3 = 2\,456\,500\) Ft.</p>
+    </section>
+    <div data-exercise="ka-6"></div>
+
+    <h2>7. Erdő, népesség — ugyanaz a modell</h2>
+    <section class="card example">
+      <p class="kicker">Példa</p>
+      <p>Nem csak pénz. Ha valami minden évben ugyanannyi <em>százalékkal</em> nő vagy csökken, kamatos kamatot számolsz.</p>
+    </section>
+    <div data-exercise="ka-7"></div>
+    <div data-exercise="ka-8"></div>
+
+    <p class="pager">
+      <a href="mertani.html">← Mértani</a>
+      <a href="torlesztes.html">Következő: törlesztés →</a>
+    </p>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <script src="js/math.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/page.js"></script>
+  <script src="js/data/kamatos.js"></script>
+  <script>startPage(FELADATOK);</script>
+</body>
+</html>
