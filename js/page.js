@@ -1,4 +1,4 @@
-/** Közös indítás: feladatok + KaTeX a teljes oldalon. */
+﻿/** Közös indítás: feladatok + KaTeX a teljes oldalon. */
 (function () {
   function renderTex() {
     if (!window.renderMathInElement) return;
@@ -8,6 +8,7 @@
         { left: "\\[", right: "\\]", display: true },
       ],
     });
+    if (window.decorateSymbols) decorateSymbols();
   }
 
   window.startPage = function (list) {

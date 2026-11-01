@@ -138,3 +138,21 @@ footer { color: var(--muted); font-size: 0.88rem; margin-top: 2.5rem; }
   nav a { font-size: 0.82rem; padding: 0.22rem 0.45rem; }
   input { max-width: none; }
 }
+
+.sym {
+  cursor: help;
+  border-bottom: 1px dotted currentColor;
+}
+#sym-tip {
+  position: fixed;
+  z-index: 20;
+  max-width: 16rem;
+  padding: 0.4rem 0.65rem;
+  border-radius: 8px;
+  background: #1b2430;
+  color: #fff;
+  font: 0.82rem/1.35 "Segoe UI", sans-serif;
+  box-shadow: 0 6px 18px #0004;
+  pointer-events: none;
+}
+
