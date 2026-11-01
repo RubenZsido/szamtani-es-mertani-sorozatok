@@ -13,9 +13,11 @@ frontend
 - keszen: kamatos oldal — logaritmus keplet a kerdesek dobozban; 2 uj pelda + 3 feladat (ka-9..ka-11); verify: 43 feladat, 0 hiba
 - keszen: kamatos vegen hitel torlesztes (10. fejezet): annuitas keplet A=t*(q^n*p')/(q^n-1), pelda + ka-12..ka-14; torlesztes keplet szorzas javitva; verify: 46 feladat, 0 hiba
 - keszen: kepletek sorrendje alap -> nehezebb (index, mertani, kamatos kepletdobozok)
+- keszen: szamtani Sn keplet a fuzet szerint: [2a1+(n-1)d]n/2 es (a1+an)/2*n (index, osszefoglalo, szamtani hint, pelda)
 
 osszefoglalo
 
+- keszen: szamtani osszegkeplet a tanult alakban (szogletes zaro + szorzas n, illetve elso-utolso tag atlaga)
 - keszen: kepletek listaja: eloszor az alapok, utana a nehezebb feladatokhoz valok
 - keszen: kamatos kamatnál logaritmusos evek szamitasa (pelda + gyakorlo feladatok)
 - keszen: kamatos oldal vegen hitel torlesztes feladatok (annuitas keplet)

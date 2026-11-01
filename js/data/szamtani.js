@@ -74,7 +74,7 @@
     {
       id: "sz-7",
       question: "Első tag 5, differencia 2. Mennyi az első 8 tag összege?",
-      hint: "\\(S_n = \\dfrac{n}{2}\\bigl(2a_1 + (n-1)d\\bigr)\\).",
+      hint: "\\(S_n = \\dfrac{[2a_1 + (n-1)d]\\,n}{2}\\) vagy \\(S_n = \\dfrac{a_1 + a_n}{2}\\cdot n\\).",
       fields: [{ key: "sn", label: "összeg", type: "int" }],
       compute(M) {
         return { sn: M.arithSum(5, 2, 8) };
